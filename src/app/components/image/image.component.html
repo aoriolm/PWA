@@ -1,0 +1,110 @@
+<div class="container mt-5">
+  <div *ngIf="image" class="row">
+    <div class="col-md-9">
+      <h1>{{ image.breeds[0].name }}</h1>
+      <img style="width: 70%; height: 70%" src="{{ image.url }}" alt="" />
+    </div>
+    <div class="col-md-3">
+      <a routerLink="/breeds" class="btn btn-danger">Back</a>
+    </div>
+  </div>
+  <h2>Description</h2>
+  <p>{{ image.breeds[0].description }}</p>
+  <div class="col-md-3">
+    <a class="btn btn-success m-2" (click)="showOrHide()">Show all details</a>
+  </div>
+  <div *ngIf="show">
+    <mat-tab-group>
+      <mat-tab label="Image info">
+        <p class="pt-3"><strong>id: </strong>{{ image.id }}</p>
+        <p><strong>Height: </strong>{{ image.height }}</p>
+        <p><strong>Width: </strong>{{ image.width }}</p>
+        <p>
+          <strong>Url: </strong
+          ><a href="{{ image.url }}" target="_blank">{{ image.url }}</a>
+        </p>
+      </mat-tab>
+      <mat-tab label="Breed info1">
+        <p class="pt-3">
+          <strong>Adaptability: </strong>{{ image.breeds[0].adaptability }}
+        </p>
+        <p>
+          <strong>Affection level: </strong
+          >{{ image.breeds[0].affection_level }}
+        </p>
+        <p>
+          <strong>Cfa url: </strong
+          ><a href="{{ image.breeds[0].cfa_url }}" target="_blank">{{
+            image.breeds[0].cfa_url
+          }}</a>
+        </p>
+        <p>
+          <strong>Child friendly: </strong>{{ image.breeds[0].child_friendly }}
+        </p>
+        <p><strong>Country code: </strong>{{ image.breeds[0].country_code }}</p>
+        <p><strong>Dog friendly: </strong>{{ image.breeds[0].dog_friendly }}</p>
+        <p><strong>Energy level: </strong>{{ image.breeds[0].energy_level }}</p>
+        <p><strong>Experimental: </strong>{{ image.breeds[0].experimental }}</p>
+        <p><strong>Grooming: </strong>{{ image.breeds[0].grooming }}</p>
+        <p><strong>Hairless: </strong>{{ image.breeds[0].hairless }}</p>
+      </mat-tab>
+      <mat-tab label="Breed info2">
+        <p class="pt-3">
+          <strong>Health issues: </strong>{{ image.breeds[0].health_issues }}
+        </p>
+        <p>
+          <strong>Hypoallergenic: </strong>{{ image.breeds[0].hypoallergenic }}
+        </p>
+        <p><strong>Id: </strong>{{ image.breeds[0].id }}</p>
+        <p><strong>Indoor: </strong>{{ image.breeds[0].indoor }}</p>
+        <p><strong>Intelligence: </strong>{{ image.breeds[0].intelligence }}</p>
+        <p><strong>Lap: </strong>{{ image.breeds[0].lap }}</p>
+        <p><strong>Life span: </strong>{{ image.breeds[0].life_span }}</p>
+        <p><strong>Natural: </strong>{{ image.breeds[0].natural }}</p>
+        <p><strong>Origin: </strong>{{ image.breeds[0].origin }}</p>
+        <p><strong>Rare: </strong>{{ image.breeds[0].rare }}</p>
+        <p><strong>Rex: </strong>{{ image.breeds[0].rex }}</p>
+      </mat-tab>
+      <mat-tab label="Breed info3">
+        <p class="pt-3">
+          <strong>Shedding level: </strong>{{ image.breeds[0].shedding_level }}
+        </p>
+        <p><strong>Short legs: </strong>{{ image.breeds[0].short_legs }}</p>
+        <p><strong>Social needs: </strong>{{ image.breeds[0].social_needs }}</p>
+        <p>
+          <strong>Stranger friendly: </strong
+          >{{ image.breeds[0].stranger_friendly }}
+        </p>
+        <p>
+          <strong>Suppressed tail: </strong
+          >{{ image.breeds[0].suppressed_tail }}
+        </p>
+        <p><strong>Temperament: </strong>{{ image.breeds[0].temperament }}</p>
+        <p>
+          <strong>Vca Hospitals url: </strong
+          ><a href="{{ image.breeds[0].vcahospitals_url }}" target="_blank">{{
+            image.breeds[0].vcahospitals_url
+          }}</a>
+        </p>
+        <p>
+          <strong>Vetstreet url: </strong
+          ><a href="{{ image.breeds[0].vetstreet_url }}" target="_blank">{{
+            image.breeds[0].vetstreet_url
+          }}</a>
+        </p>
+        <p><strong>Vocalisation: </strong>{{ image.breeds[0].vocalisation }}</p>
+        <p>
+          <strong>Imperial Weight: </strong
+          >{{ image.breeds[0].weight.imperial }}
+        </p>
+        <p><strong>Metric: </strong>{{ image.breeds[0].weight.metric }}</p>
+        <p>
+          <strong>Wikipedia url: </strong
+          ><a href="{{ image.breeds[0].wikipedia_url }}" target="_blank">{{
+            image.breeds[0].wikipedia_url
+          }}</a>
+        </p>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
